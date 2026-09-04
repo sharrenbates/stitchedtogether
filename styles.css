@@ -92,8 +92,9 @@ a{ color: var(--berry); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  gap: 1.5rem;
 }
 
 .wordmark{
@@ -103,12 +104,14 @@ a{ color: var(--berry); }
   color: var(--teal-deep);
   text-decoration: none;
   letter-spacing: 0.01em;
+  flex-shrink: 0;
 }
 
 .site-nav{
   display: flex;
   gap: 1.8rem;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 .site-nav a{
   color: var(--ink);
@@ -119,24 +122,25 @@ a{ color: var(--berry); }
 
 .social-links{
   display: flex;
-  gap: 0.8rem;
+  gap: 1.2rem;
   align-items: center;
   margin-left: auto;
+  flex-shrink: 0;
 }
 
 .social-icon{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 44px;
+  height: 44px;
   color: var(--teal-deep);
   text-decoration: none;
 }
 
 .social-icon svg{
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
   fill: var(--teal-deep);
   transition: fill 0.2s ease;
 }
@@ -155,6 +159,7 @@ a{ color: var(--berry); }
   background: none;
   border: none;
   cursor: pointer;
+  flex-shrink: 0;
 }
 .nav-toggle span{
   display: block;
@@ -164,7 +169,22 @@ a{ color: var(--berry); }
 }
 
 @media (max-width: 720px){
-  .nav-toggle{ display: flex; }
+  .header-inner{
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
+  .wordmark{
+    display: flex;
+    justify-content: center;
+  }
+  .nav-toggle{ 
+    display: flex;
+    position: absolute;
+    right: 1.5rem;
+    top: 0.9rem;
+  }
   .site-nav{
     position: absolute;
     top: 100%; left: 0; right: 0;
@@ -184,8 +204,10 @@ a{ color: var(--berry); }
   }
   .social-links{
     margin-left: 0;
-    padding: 1rem 1.5rem 0;
+    padding: 1rem 1.5rem;
     border-top: 1px solid var(--cream-deep);
+    gap: 1.2rem;
+    justify-content: center;
   }
 }
 
