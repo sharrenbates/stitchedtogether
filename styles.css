@@ -298,7 +298,8 @@ a{ color: var(--berry); }
 }
 .section-lede{
   color: var(--ink-soft);
-  max-width: 56ch;
+  max-width: 90ch;
+  text-align: left;
 }
 
 .about-grid{
