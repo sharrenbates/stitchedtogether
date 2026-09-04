@@ -85,8 +85,7 @@ a{ color: var(--berry); }
   z-index: 100;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
-  border-bottom: 2px dotted var(--teal);
-  opacity: 0.3;
+  border-bottom: 2px dotted rgba(74, 157, 147, 0.3);
 }
 
 .header-inner{
@@ -119,7 +118,7 @@ a{ color: var(--berry); }
   flex: 1;
 }
 .site-nav a{
-  color: var(--ink);
+  color: var(--teal);
   text-decoration: none;
   font-size: 0.97rem;
   line-height: 1.4;
@@ -209,6 +208,7 @@ a{ color: var(--berry); }
   .site-nav a{
     padding: 0.9rem 1.5rem;
     border-top: 1px solid var(--cream-deep);
+    color: var(--teal);
   }
   .social-links{
     position: absolute;
