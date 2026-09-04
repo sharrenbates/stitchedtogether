@@ -4,8 +4,8 @@
    flyer border (gold), plus a cranberry-yarn accent.
 --------------------------------------------------------- */
 :root{
-  --cream: #FAF6EE;
-  --cream-deep: #FBFAF6;
+  --cream: #FFFFFF;
+  --cream-deep: #FFFFFF;
   --teal: #4A9D93;
   --teal-deep: #2B5450;
   --gold: #C6A669;
@@ -83,7 +83,7 @@ a{ color: var(--berry); }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 246, 238, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
   border-bottom: 2px dashed var(--teal);
 }
