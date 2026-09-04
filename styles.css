@@ -91,10 +91,10 @@ a{ color: var(--berry); }
 .header-inner{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .wordmark{
@@ -105,26 +105,31 @@ a{ color: var(--berry); }
   text-decoration: none;
   letter-spacing: 0.01em;
   flex-shrink: 0;
+  margin-right: auto;
+  display: none;
 }
 
 .site-nav{
   display: flex;
   gap: 1.8rem;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  flex: 1;
 }
 .site-nav a{
   color: var(--ink);
   text-decoration: none;
   font-size: 0.97rem;
+  line-height: 1.4;
 }
 .site-nav a:hover{ color: var(--berry); }
 
 .social-links{
   display: flex;
-  gap: 1.2rem;
+  gap: 0.8rem;
   align-items: center;
-  margin-left: auto;
+  margin-left: 0;
   flex-shrink: 0;
 }
 
@@ -132,17 +137,19 @@ a{ color: var(--berry); }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: auto;
+  height: auto;
+  padding: 0.4rem;
   color: var(--teal-deep);
   text-decoration: none;
 }
 
 .social-icon svg{
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
   fill: var(--teal-deep);
   transition: fill 0.2s ease;
+  display: block;
 }
 
 .social-icon:hover svg{
@@ -170,20 +177,19 @@ a{ color: var(--berry); }
 
 @media (max-width: 720px){
   .header-inner{
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: center;
     padding-top: 0.9rem;
     padding-bottom: 0.9rem;
+    gap: 1rem;
   }
   .wordmark{
     display: flex;
-    justify-content: center;
+    margin-right: auto;
   }
   .nav-toggle{ 
     display: flex;
-    position: absolute;
-    right: 1.5rem;
-    top: 0.9rem;
+    order: 3;
   }
   .site-nav{
     position: absolute;
@@ -195,7 +201,8 @@ a{ color: var(--berry); }
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.25s ease;
-    margin-left: 0;
+    justify-content: flex-start;
+    flex: none;
   }
   .site-nav.open{ max-height: 420px; }
   .site-nav a{
@@ -203,11 +210,19 @@ a{ color: var(--berry); }
     border-top: 1px solid var(--cream-deep);
   }
   .social-links{
-    margin-left: 0;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
     padding: 1rem 1.5rem;
     border-top: 1px solid var(--cream-deep);
     gap: 1.2rem;
-    justify-content: center;
+    justify-content: flex-start;
+    background: var(--cream);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+  .site-nav.open ~ .social-links{
+    max-height: 100px;
   }
 }
 
