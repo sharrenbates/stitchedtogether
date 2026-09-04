@@ -222,7 +222,7 @@ a{ color: var(--berry); }
   align-items: center;
 }
 .hero-logo{
-  width: min(560px, 90%);
+  width: min(700px, 95%);
   height: auto;
   margin-bottom: 1.6rem;
 }
