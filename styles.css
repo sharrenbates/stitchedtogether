@@ -245,7 +245,7 @@ a{ color: var(--berry); }
 .hero-lede{
   font-size: 1.15rem;
   color: var(--ink-soft);
-  max-width: 46ch;
+  max-width: 70ch;
 }
 .hero-actions{
   display: flex;
